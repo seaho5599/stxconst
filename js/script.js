@@ -1,4 +1,30 @@
 $(document).ready(function(){
+  // 안내창 기능
+  // 추가기능 :  스크롤바 없에기
+  $('html').css('overflow', 'hiden');
+  let modalWrap = $('.modal-wrap');
+  let modalClose = $('.modal-close');
+  modalClose.click(function(){
+    modalWrap.stop().fadeOut(100);
+    // 추가기능:  스크롤바 살리기
+    $('html').css('overflow', 'auto');
+  });
+
+  let modalMain = $('.modal-main');
+  // 내용배경 클릭
+  modalMain.click(function(event){
+    event.stopPropagation();
+  });
+  // 전체 배경 클릭
+  modalWrap.click(function(){
+    modalWrap.stop().fadeOut(100);
+    $('html').css('overflow', 'auto');
+  });
+});
+
+
+
+$(document).ready(function(){
   // .header를 저장한다.
   let header = $('.header');
   let gnb = $('.gnb');

@@ -36,6 +36,71 @@ body {
   color: #444;
 }
 
+/* 안내창 */
+.modal-wrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+.modal-main{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 400px;
+  background-color: #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 7px 0px rgba(0 0 0 / 70%);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+.modal-main h1{
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  padding: 10px 0;
+}
+.modal-main p{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.8;
+}
+.modal-main b{
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+.modal-main strong{
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+.modal-close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: #555;
+  background: transparent;
+  /* transition: transform 0.4s; */
+}
+.modal-close:hover{
+  /* transform: rotate(90deg); */
+  font-size: 21px;
+}
+.modal-close:active{
+  font-size: 23px;
+}
 /* 공통요소 */
 .clearfix::after {
   content: '';
@@ -56,6 +121,7 @@ body {
   padding-top: 80px;
 }
 
+
 /* 내용별 Section */
 /* 상단 */
 .header {
@@ -66,6 +132,8 @@ body {
   width: 100%;
   height: 80px;
   transition: height 0.5s;
+  box-shadow: 0px 0px 7px 0px rgba(0 0 0 / 50%);
+
   z-index: 9999;
 }
 
