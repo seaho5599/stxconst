@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -28,7 +27,8 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -37,53 +37,75 @@ body {
 }
 
 /* 안내창 */
-.modal-wrap{
+.modal-wrap {
   position: fixed;
   left: 0;
   top: 0;
+  display: block;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 99999;
 }
-.modal-main{
+
+.modal-main {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 550px;
   height: 400px;
-  background-color: #ddd;
+  background: url("../images/modalimg.png") no-repeat center #ddd;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0px 0px 7px 0px rgba(0 0 0 / 70%);
   border: 5px solid rgba(0, 0, 0, 0.1);
 }
-.modal-main h1{
+
+.modal-main h1 {
   font-size: 30px;
   font-weight: 500;
   text-align: center;
   color: #333;
   padding: 10px 0;
 }
-.modal-main p{
+
+.modal-main p {
   text-align: center;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   color: #333;
   line-height: 1.8;
 }
-.modal-main b{
+
+.modal-main b {
   font-weight: 600;
   text-decoration: underline;
   color: #ed1c24;
 }
-.modal-main strong{
+
+.modal-main strong {
   font-weight: 600;
   text-decoration: underline;
   color: #ed1c24;
 }
-.modal-close{
+.modal-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #999;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.modal-main span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.8;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+.modal-close {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -94,16 +116,19 @@ body {
   background: transparent;
   /* transition: transform 0.4s; */
 }
-.modal-close:hover{
+
+.modal-close:hover {
   /* transform: rotate(90deg); */
   font-size: 21px;
 }
-.modal-close:active{
-  font-size: 23px;
+
+.modal-close:active {
+  font-size: 22px;
 }
+
 /* 공통요소 */
 .clearfix::after {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   width: 100%;
@@ -120,7 +145,6 @@ body {
 .wrap {
   padding-top: 80px;
 }
-
 
 /* 내용별 Section */
 /* 상단 */
@@ -142,7 +166,7 @@ body {
 }
 
 .header::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -153,7 +177,8 @@ body {
   box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 20%);
 }
 
-.header .inner {}
+.header .inner {
+}
 
 .logo {
   position: absolute;
@@ -161,7 +186,7 @@ body {
   top: 20px;
   width: 150px;
   height: 39px;
-  background: url('../images/logo.png') no-repeat center;
+  background: url("../images/logo.png") no-repeat center;
   background-size: cover;
   font-size: 0;
 }
@@ -171,7 +196,7 @@ body {
 }
 
 .gnb::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -190,16 +215,16 @@ body {
   margin: 0 auto;
 }
 
-.depth1>li {
+.depth1 > li {
   display: table-cell;
   width: 180px;
 }
 
-.depth1>li:last-child {
+.depth1 > li:last-child {
   width: 70px;
 }
 
-.depth1>li>a {
+.depth1 > li > a {
   position: relative;
   font-size: 19px;
   color: #000;
@@ -255,7 +280,7 @@ body {
 .visual {
   position: relative;
   display: block;
-  background: url('../images/img_visual01.png') no-repeat center;
+  background: url("../images/img_visual01.png") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -278,7 +303,7 @@ body {
 }
 
 .visual-title::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: -50px;
@@ -304,12 +329,11 @@ body {
   display: block;
   width: 33px;
   height: 33px;
-  background: url('../images/bg_common.png') no-repeat;
+  background: url("../images/bg_common.png") no-repeat;
   background-position: -122px 0;
   border: 0;
   font-size: 0;
   cursor: pointer;
-
 }
 
 /* 업무파트 */
@@ -335,7 +359,7 @@ body {
 }
 
 .part-title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -352,7 +376,6 @@ body {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 75px;
-
 }
 
 .part-list {
@@ -367,8 +390,7 @@ body {
   width: 20%;
   height: 420px;
   float: left;
-  background: url('../images/img_business.png') no-repeat;
-
+  background: url("../images/img_business.png") no-repeat;
 }
 
 .part-list li a {
@@ -378,7 +400,6 @@ body {
   height: 100%;
   background-color: rgba(244, 128, 37, 0);
   transition: background-color 0.5s;
-
 }
 
 .part-list li a h3 {
@@ -390,7 +411,7 @@ body {
 }
 
 .part-list li a:hover {
-  background-color: rgba(244, 128, 37, 1.0);
+  background-color: rgba(244, 128, 37, 1);
 }
 
 .part-list li a:hover::after {
@@ -398,12 +419,12 @@ body {
 }
 
 .part-list li a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
-  background: url('../images/bg_common.png') no-repeat;
+  background: url("../images/bg_common.png") no-repeat;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -445,7 +466,7 @@ body {
 }
 
 .news::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -455,7 +476,7 @@ body {
 }
 
 .news::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
@@ -511,20 +532,18 @@ body {
 .news-list li a {
   position: relative;
   display: block;
-
 }
 
 .news-list li a::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   transform: translateX(-50%);
   top: 0;
   width: 48px;
   height: 23px;
-  background: url('../images/bg_common.png') no-repeat;
+  background: url("../images/bg_common.png") no-repeat;
   background-position: 0px -49px;
-
 }
 
 .news-list li a span {
@@ -558,12 +577,12 @@ body {
 
 .cs-fsq {
   margin-right: 2px;
-  background: #fff url('../images/bg_faq.png') no-repeat;
+  background: #fff url("../images/bg_faq.png") no-repeat;
   background-position: calc(100% - 50px) center;
 }
 
 .cs-qa {
-  background: #fff url('../images/bg_custom.png') no-repeat;
+  background: #fff url("../images/bg_custom.png") no-repeat;
   background-position: calc(100% - 50px) center;
 }
 
@@ -576,7 +595,6 @@ body {
 
 .cs p {
   font-weight: 300;
-
 }
 
 /* 소개 */
@@ -592,7 +610,7 @@ body {
 }
 
 .about-top {
-  background: url('../images/img_about.png') no-repeat;
+  background: url("../images/img_about.png") no-repeat;
   background-position: right top;
   padding-bottom: 70px;
 }
@@ -604,7 +622,7 @@ body {
 }
 
 .about-top p::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 10px;
@@ -647,12 +665,12 @@ body {
 }
 
 .about-bottom a::before {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   width: 100px;
   height: 108px;
-  background: url('../images/bg_icon.png') no-repeat;
+  background: url("../images/bg_icon.png") no-repeat;
   margin-bottom: 25px;
 }
 
@@ -687,16 +705,14 @@ body {
 
 .footer-wrap {
   padding-left: 250px;
-  background: url('../images/logo_footer.png') no-repeat;
-
+  background: url("../images/logo_footer.png") no-repeat;
 }
-.footer-wrap address{
+.footer-wrap address {
   color: #c3c3c3;
   font-size: 13px;
   line-height: 1.8;
 }
-.copy{
+.copy {
   color: #c3c3c3;
   font-size: 13px;
-
 }
